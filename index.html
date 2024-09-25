@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - CV</title>
+    <title>Boyan Georgiev - CV</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 20px;
-            background-color: #f4f4f4;
+            background-color: #fff; /* White background */
+            color: #000; /* Black text */
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background: #fff;
+            background: #f4f4f4; /* Light gray container */
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             position: relative; 
@@ -23,41 +24,48 @@
         .profile-pic {
             position: absolute; 
             top: 10px;
-            right: 1px;
+            right: 10px;
             width: 100px; 
             height: auto; 
             border-radius: 50%; 
             border: 2px solid #007BFF; 
         }
-
         h1, h2 {
             border-bottom: 2px solid #ddd;
             padding-bottom: 10px;
-        }
-        h1 {
-            color: #333;
-        }
-        p, ul {
-            margin-bottom: 10px;
+            color: #333; /* Darker text for headings */
         }
         ul {
             list-style: none;
             padding-left: 0;
         }
-        ul li::before {
-            content: "•";
-            color: #007BFF;
-            padding-right: 8px;
+        .cert-container {
+            margin: 10px 0;
+            text-align: center;
         }
-        .section-title {
-            font-size: 1.2em;
-            margin-bottom: 5px;
-            font-weight: bold;
+        .cert-image {
+            width: 150px;
+            height: auto;
+            border: 2px solid #007BFF;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+            cursor: pointer; /* Pointer cursor for clickable images */
         }
-        .date {
-            float: right;
-            font-style: italic;
-            color: #555;
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
         }
     </style>
 </head>
@@ -65,75 +73,57 @@
 
 <div class="container">
     <h1>Boyan Georgiev</h1>
-
     <img src="certificates/DSC_0013.JPG" alt="Boyan Georgiev" class="profile-pic">
 
-  <p>Address: Nationalestraat, 2000 Antwerpen | Email: boqng25@gmail.com | Phone: +359/877706281</p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/boyan-georgiev-08853329b/" target="_blank">View my LinkedIn Profile</a></p>
+    <p>Address: Nationalestraat, 2000 Antwerpen | Email: boqng25@gmail.com | Phone: +359/877706281</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/boyan-georgiev-08853329b/" style="color: #007BFF;">My LinkedIn Profile</a></p>
 
     <h2>Professional Summary</h2>
-    <p>I am a dedicated Advanced Computer Science student with hands-on experience in .NET and Object-Oriented Programming (OOP).
-     I am eager to apply my skills in a dynamic environment and contribute to innovative projects while continuing to grow as a developer.</p>
+    <p>I am a dedicated Advanced Computer Science student with hands-on experience in .NET and Object-Oriented Programming (OOP). I am eager to apply my skills in a dynamic environment and contribute to innovative projects while continuing to grow as a developer.</p>
 
     <h2>Education</h2>
-   <div>
-    <span class="section-title">High School Diploma</span>
-    <span class="date">Graduated: 2024</span><br>
-    <span>Mathematical High School</span>
-    <ul>
-        <li>Relevant coursework: Programming, Mathematics</li>
-        <li>Key achievements: Developed strong skills in Object-Oriented Programming (OOP)</li>
-        <li>Programming languages: C#, Java</li>
-    </ul>
-</div>
-
+    <div>
+        <span class="section-title">High School Diploma</span>
+        <span class="date" style="float:right;">Graduated: 2024</span><br>
+        <span>Mathematical High School</span>
+        <ul>
+            <li>Relevant coursework: Programming, Mathematics</li>
+            <li>Key achievements: Developed strong skills in Object-Oriented Programming (OOP)</li>
+            <li>Programming languages: C#, Java</li>
+        </ul>
+    </div>
 
     <h2>Work Experience</h2>
     <div>
         <span class="section-title">Job Title</span>
-        <span class="date">Dates</span><br>
+        <span class="date" style="float:right;">Dates</span><br>
         <span>No Experience</span>
-       
     </div>
 
     <h2>Skills</h2>
-<ul>
-    <li>Technical skills: C#, Java, Object-Oriented Programming (OOP), .NET Framework</li>
-    <li>Language skills: Bulgarian (native), English (advanced)</li>
-    <li>Other relevant skills: Problem-solving, teamwork, and adaptability</li>
-</ul>
+    <ul>
+        <li>Technical skills: C#, Java, Object-Oriented Programming (OOP), .NET Framework</li>
+        <li>Language skills: Bulgarian (native), English (advanced)</li>
+        <li>Other relevant skills: Problem-solving, teamwork, and adaptability</li>
+    </ul>
 
-
-<h2>Certifications and Courses</h2>
-<ul>
-    <li>
-        Programming Fundamentals with C# | SoftUni | January 2023
-        <a href="certificates/PF.png" target="_blank">
-            <img src="certificates/PF.png" alt="Programming Fundamentals with C# Certificate" style="width:50px; height:50px; vertical-align:middle;">
-        </a>
-    </li>
-    <li>
-        C# OOP | SoftUni | June 2023
-        <a href="certificates/oop.png" target="_blank">
-            <img src="certificates/oop.png" alt="C# OOP Certificate" style="width:50px; height:50px; vertical-align:middle;">
-        </a>
-    </li>
-    <li>
-        MS SQL | SoftUni | September 2023
-        <a href="certificates/MySql.png" target="_blank">
-            <img src="certificates/MySql.png" alt="MS SQL Certificate" style="width:50px; height:50px; vertical-align:middle;">
-        </a>
-    </li>
-    <li>
-        Entity Framework Core | SoftUni | October 2023
-        <a href="certificates/EF.png" target="_blank">
-            <img src="certificates/EF.png" alt="Entity Framework Core Certificate" style="width:50px; height:50px; vertical-align:middle;">
-        </a>
-    </li>
-</ul>
-
-
-
+    <h2>Certifications and Courses</h2>
+    <div class="cert-container">
+        <span>Programming Fundamentals with C# | SoftUni | January 2023</span><br>
+        <img src="certificates/PF.png" alt="Programming Fundamentals with C# Certificate" class="cert-image" onclick="openLightbox(this.src)">
+    </div>
+    <div class="cert-container">
+        <span>C# OOP | SoftUni | June 2023</span><br>
+        <img src="certificates/oop.png" alt="C# OOP Certificate" class="cert-image" onclick="openLightbox(this.src)">
+    </div>
+    <div class="cert-container">
+        <span>MS SQL | SoftUni | September 2023</span><br>
+        <img src="certificates/MySql.png" alt="MS SQL Certificate" class="cert-image" onclick="openLightbox(this.src)">
+    </div>
+    <div class="cert-container">
+        <span>Entity Framework Core | SoftUni | October 2023</span><br>
+        <img src="certificates/EF.png" alt="Entity Framework Core Certificate" class="cert-image" onclick="openLightbox(this.src)">
+    </div>
 
     <h2>Extracurricular Activities</h2>
     <ul>
@@ -145,8 +135,23 @@
         <li>Bulgarian: Native</li>
         <li>English: C1 (Advanced)</li>
     </ul>
-    
 </div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+    function openLightbox(src) {
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox').style.display = 'flex';
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+</script>
 
 </body>
 </html>
